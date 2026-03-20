@@ -580,12 +580,12 @@ export default function App() {
                 <div className="stat-header">The cost of bad timing</div>
                 <div className="stat-items">
                   <div>
-                    <div className="stat-value blue">73%</div>
-                    <div className="stat-label">of CRM contacts receive zero outreach after initial capture</div>
+                    <div className="stat-value blue">50%+</div>
+                    <div className="stat-label">of leads captured in a CRM never receive a single follow-up</div>
                   </div>
                   <div>
-                    <div className="stat-value green">5×</div>
-                    <div className="stat-label">higher conversion when you respond within the first hour of intent</div>
+                    <div className="stat-value green">7×</div>
+                    <div className="stat-label">more likely to qualify a lead when you respond within the first hour</div>
                   </div>
                   <div>
                     <div className="stat-value red">$0</div>
@@ -706,7 +706,7 @@ export default function App() {
         <div className="container">
           <div className="diff-header fade-up" ref={addFadeRef}>
             <span className="section-tag">vs. Traditional tools</span>
-            <h2 className="section-title display">Your CRM stores data.<br />Delta activates it.</h2>
+            <h2 className="section-title display">Your CRM stores data.<br />Delta acts on it.</h2>
           </div>
           <div className="fade-up" ref={addFadeRef} style={{ overflowX: "auto" }}>
             <table className="compare-table">
