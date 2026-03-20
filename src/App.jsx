@@ -612,7 +612,7 @@ export default function App() {
             {[
               ["01", "\uD83D\uDD0C", "Capture", "Connect your CRM, email, and social channels. Delta structures everything, no manual entry."],
               ["02", "\uD83D\uDCE1", "Detect", "Real-time monitoring across all inputs. Delta scores contacts and identifies who's ready to buy."],
-              ["03", "\uD83E\uDDE0", "Decide", "AI determines who to contact, when, and through which channel. No workflows to configure."],
+              ["03", "\uD83E\uDDE0", "Decide", "AI determines who to target, when, and through which channel. No workflows to configure."],
               ["04", "\u26A1", "Execute", "Personalised outreach deployed instantly. Engagement captured. New leads logged."],
             ].map(([num, icon, title, desc]) => (
               <div className="step" key={num}>
