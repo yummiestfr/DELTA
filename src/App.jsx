@@ -316,15 +316,24 @@ const styles = `
     background: radial-gradient(ellipse, rgba(79,142,255,0.1) 0%, transparent 70%);
     pointer-events: none;
   }
-  .cta-form { display: flex; justify-content: center; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .cta-form { display: flex; flex-direction: column; align-items: center; gap: 16px; }
   .email-input {
-    min-width: 280px; background: var(--bg-2); color: var(--text);
+    width: 100%; max-width: 480px; background: var(--bg-2); color: var(--text);
     border: 1px solid var(--border-bright); border-radius: 10px;
     padding: 16px 18px; font-size: 15px; outline: none;
     font-family: 'Geist', sans-serif; transition: border-color 0.2s;
   }
   .email-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
   .email-input::placeholder { color: var(--text-3); }
+  .reason-input {
+    width: 100%; max-width: 480px; background: var(--bg-2); color: var(--text);
+    border: 1px solid var(--border-bright); border-radius: 10px;
+    padding: 16px 18px; font-size: 15px; outline: none;
+    font-family: 'Geist', sans-serif; transition: border-color 0.2s;
+    resize: vertical; min-height: 80px; line-height: 1.5;
+  }
+  .reason-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
+  .reason-input::placeholder { color: var(--text-3); }
   .cta-note { font-size: 13px; color: var(--text-3); margin-top: 20px; font-family: 'DM Mono', monospace; letter-spacing: 0.04em; }
 
   /* ── Footer ── */
@@ -364,8 +373,7 @@ const styles = `
     .features-grid { grid-template-columns: 1fr; }
     .hero-actions { flex-direction: column; align-items: stretch; }
     .hero-actions .btn-primary, .hero-actions .btn-ghost { justify-content: center; }
-    .cta-form { flex-direction: column; align-items: center; }
-    .email-input { width: 100%; min-width: auto; }
+    .email-input, .reason-input { max-width: 100%; }
     .btn-primary { width: 100%; justify-content: center; }
     footer { flex-direction: column; gap: 16px; text-align: center; }
     .compare-table th, .compare-table td { padding: 12px 14px; font-size: 13px; }
@@ -400,6 +408,7 @@ const CloseIcon = () => (
 export default function App() {
   const fadeRefs = useRef([]);
   const [email, setEmail] = useState("");
+  const [reason, setReason] = useState("");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -430,7 +439,10 @@ export default function App() {
       return;
     }
     setLoading(true);
-    const { error } = await supabase.from("waitlist").insert([{ email: cleanEmail }]);
+    const row = { email: cleanEmail };
+    const cleanReason = reason.trim();
+    if (cleanReason) row.reason = cleanReason;
+    const { error } = await supabase.from("waitlist").insert([row]);
     if (error) {
       if (error.code === "23505") {
         setMessage("You're already on the waitlist.");
@@ -441,6 +453,7 @@ export default function App() {
     } else {
       setMessage("You're on the waitlist!");
       setEmail("");
+      setReason("");
     }
     setLoading(false);
   };
@@ -779,10 +792,17 @@ export default function App() {
                   required
                   className="email-input"
                 />
+                <textarea
+                  placeholder="Why are you interested in using Delta? (optional)"
+                  value={reason}
+                  onChange={(e) => setReason(e.target.value)}
+                  className="reason-input"
+                  rows={3}
+                />
                 <button
                   type="submit"
                   className="btn-primary"
-                  style={{ fontSize: 16, padding: "16px 32px", width: "auto" }}
+                  style={{ fontSize: 16, padding: "16px 32px" }}
                   disabled={loading}
                 >
                   {loading ? "Joining..." : "Request early access"}
