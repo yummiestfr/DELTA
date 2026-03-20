@@ -502,10 +502,6 @@ export default function App() {
         <div className="container">
           <div className="hero-grid">
             <div>
-              <div className="hero-tag">
-                <span className="dot" />
-                Real-time intent engine
-              </div>
               <h1 className="hero-title display">
                 Your next deal<br />is already in<br /><em>your CRM.</em>
               </h1>
