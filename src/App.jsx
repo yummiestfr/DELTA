@@ -506,7 +506,7 @@ export default function App() {
                 Your next deal<br />is already in<br /><em>your CRM.</em>
               </h1>
               <p className="hero-sub">
-                Delta detects <strong>buying intent</strong> the moment it happens, decides the best action, and executes it — automatically.
+                Delta detects <strong>buying intent</strong> the moment it happens, decides the best action, and executes it, automatically.
               </p>
               <div className="hero-actions">
                 <a href="#cta" className="btn-primary">
@@ -523,10 +523,10 @@ export default function App() {
                 </div>
                 <div className="signal-list">
                   {[
-                    { icon: "\uD83C\uDFAF", iconClass: "green", name: "Sarah Chen — Enterprise", detail: "Opened pricing email 3× in 40 min", time: "2m ago", action: "Act now", actionClass: "act" },
-                    { icon: "\uD83D\uDC41", iconClass: "blue", name: "James Okafor — Warm Lead", detail: "Clicked ad twice + viewed profile", time: "8m ago", action: "Watching", actionClass: "watch" },
+                    { icon: "\uD83C\uDFAF", iconClass: "green", name: "Sarah Chen, Enterprise", detail: "Opened pricing email 3× in 40 min", time: "2m ago", action: "Act now", actionClass: "act" },
+                    { icon: "\uD83D\uDC41", iconClass: "blue", name: "James Okafor, Warm Lead", detail: "Clicked ad twice + viewed profile", time: "8m ago", action: "Watching", actionClass: "watch" },
                     { icon: "\u26A1", iconClass: "amber", name: "New lead captured", detail: "Engaged with post \u2192 added to CRM", time: "14m ago", action: "Outreach sent", actionClass: "sent" },
-                    { icon: "\u2709\uFE0F", iconClass: "blue", name: "Maria Santos — Reactivated", detail: "Dormant 6 months \u2192 engaged with post", time: "31m ago", action: "Follow-up sent", actionClass: "sent" },
+                    { icon: "\u2709\uFE0F", iconClass: "blue", name: "Maria Santos, Reactivated", detail: "Dormant 6 months \u2192 engaged with post", time: "31m ago", action: "Follow-up sent", actionClass: "sent" },
                   ].map((s, i) => (
                     <div className="signal-item" key={i}>
                       <div className={`signal-icon ${s.iconClass}`}>{s.icon}</div>
@@ -556,7 +556,7 @@ export default function App() {
               Timing is everything.<br />Right now, you're always late.
             </h2>
             <p className="section-sub">
-              Intent signals disappear faster than teams can respond. Your CRM has the data — but no one's watching in real time.
+              Intent signals disappear faster than teams can respond. Your CRM has the data, but no one's watching in real time.
             </p>
           </div>
           <div className="problem-grid">
@@ -605,12 +605,12 @@ export default function App() {
             <span className="section-tag">How it works</span>
             <h2 className="section-title display">Four steps.<br />Zero guesswork.</h2>
             <p className="section-sub" style={{ margin: "12px auto 0", textAlign: "center" }}>
-              Connect your tools, and Delta handles the rest — from signal detection to personalised outreach.
+              Connect your tools, and Delta handles the rest, from signal detection to personalised outreach.
             </p>
           </div>
           <div className="steps fade-up" ref={addFadeRef}>
             {[
-              ["01", "\uD83D\uDD0C", "Capture", "Connect your CRM, email, and social channels. Delta structures everything — no manual entry."],
+              ["01", "\uD83D\uDD0C", "Capture", "Connect your CRM, email, and social channels. Delta structures everything, no manual entry."],
               ["02", "\uD83D\uDCE1", "Detect", "Real-time monitoring across all inputs. Delta scores contacts and identifies who's ready to buy."],
               ["03", "\uD83E\uDDE0", "Decide", "AI determines who to contact, when, and through which channel. No workflows to configure."],
               ["04", "\u26A1", "Execute", "Personalised outreach deployed instantly. Engagement captured. New leads logged."],
@@ -651,7 +651,7 @@ export default function App() {
               <div className="feature-badge green">Core</div>
               <span className="feature-icon">{"\uD83C\uDFAF"}</span>
               <h3>Decision engine</h3>
-              <p>Real-time decisions about <em>who, when, and how</em> to reach out — not just content scheduling.</p>
+              <p>Real-time decisions about <em>who, when, and how</em> to reach out, not just content scheduling.</p>
               <ul className="feature-list">
                 <li>Intent-ranked contact prioritisation</li>
                 <li>Channel and timing selection</li>
@@ -671,7 +671,7 @@ export default function App() {
               <div className="feature-badge">Execution</div>
               <span className="feature-icon">{"\uD83D\uDE80"}</span>
               <h3>Autonomous outreach</h3>
-              <p>Personalised messages deployed the moment intent is detected — across every channel.</p>
+              <p>Personalised messages deployed the moment intent is detected, across every channel.</p>
               <ul className="feature-list">
                 <li>Email, Instagram, TikTok</li>
                 <li>Zero manual setup per send</li>
@@ -691,7 +691,7 @@ export default function App() {
               <div className="feature-badge">Learning</div>
               <span className="feature-icon">{"\uD83D\uDCC8"}</span>
               <h3>Continuous improvement</h3>
-              <p>Every outcome — opened, converted, ignored — trains the system to perform better.</p>
+              <p>Every outcome, opened, converted, ignored, trains the system to perform better.</p>
               <ul className="feature-list">
                 <li>Timing optimisation per segment</li>
                 <li>Conversion-driven prioritisation</li>
@@ -747,7 +747,7 @@ export default function App() {
               Most teams never <em>act on them.</em>
             </h2>
             <p className="proof-sub">
-              Delta closes the gap between intent and action — so you never miss a deal that was already yours.
+              Delta closes the gap between intent and action, so you never miss a deal that was already yours.
             </p>
             <div className="proof-metrics">
               {[
@@ -775,7 +775,7 @@ export default function App() {
               Turn your CRM into a<br /><em style={{ fontStyle: "italic", color: "var(--accent-2)" }}>real-time revenue engine.</em>
             </h2>
             <p className="section-sub" style={{ textAlign: "center", maxWidth: 480, margin: "0 auto 48px" }}>
-              Delta finds the deals already in your CRM, times the outreach perfectly, and executes — before your competitors notice.
+              Delta finds the deals already in your CRM, times the outreach perfectly, and executes, before your competitors notice.
             </p>
 
             <form onSubmit={handleWaitlistSubmit}>
